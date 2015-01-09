@@ -1,6 +1,6 @@
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/carsDB'); //this will create the db inside the local machine.
+mongoose.connect('mongodb://mycars:mycars@ds029541.mongolab.com:29541/mycars'); //this will create the db inside the local machine.
 // mongoose.connect('mongodb://username:password@host:port1/database') this works for major client with a central dab
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Can\'t Connect to the DataBase'));
