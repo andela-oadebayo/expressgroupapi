@@ -4,7 +4,7 @@ var app = express();
 
 var allowCrossOrigin = function (request, response, next){
 response.header('Access-Control-Allow-Origin', '*');
-response.header('Access-Control-Allow-Methods', 'GET, PUT, POST');
+response.header('Access-Control-Allow-Methods', 'GET,PUT,POST');
 // ******(The following is used when Authorization is required)****
 //response.header('Access-Control-Allow-Headers', 'Content-Type Authorization Content-Length, X-Requested-With ');
 //intercepts Options method

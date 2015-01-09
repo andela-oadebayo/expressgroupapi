@@ -8,7 +8,7 @@ var Car = mongoose.model('Car');
 
 router.route('/')
   .get(function(request, response){
-    Car.find({}, 'name maker year nickname -_id', function(err, data){
+    Car.find({}, 'name maker year -_id', function(err, data){
       response.json(data);
     });
   })

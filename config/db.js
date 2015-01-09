@@ -33,9 +33,7 @@ var carSchema = new mongoose.Schema({
   Name : {type: String, required: true},
   Year : {type: Number, default: 1970},
   Maker:{type: String, default: "No Maker Specified"},
- 
-
-});
+ });
 
 
 mongoose.model('Car', carSchema);
