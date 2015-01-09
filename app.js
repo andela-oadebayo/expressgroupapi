@@ -7,6 +7,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 var logger = require('morgan');
 app.use(logger('dev'));
+
 app.get('/', function (request, response){
   response.redirect('/cars');
  });
