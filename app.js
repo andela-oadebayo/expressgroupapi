@@ -6,8 +6,12 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:true}));
 
 var logger = require('morgan');
-app.use(logger('combined'));
+app.use(logger('dev'));
+app.use('/', function (request, response){
+  res.redirect('/cars');
+});
 app.use('/cars', routes);
+
 
 app.listen(8080, function(){
   console.log("listening on port 8080");
