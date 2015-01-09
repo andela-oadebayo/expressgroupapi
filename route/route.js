@@ -8,7 +8,7 @@ var Car = mongoose.model('Car');
 
 router.route('/')
   .get(function(request, response){
-    Car.find({}, 'name maker year -_id', function(err, data){
+    Car.find({}, 'name maker year nickname -_id', function(err, data){
       response.json(data);
     });
   })
@@ -35,13 +35,13 @@ router.route('/:name')
         response.send("Updated");
       });
   })
-  // .delete( function(request, response){
-  //   Car.findOneAndRemove({name:request.params.name}, function(err){
-  //     if(err){
-  //       response.send(err);
-  //     }
-  //     response.send("DELETED");
-  //   });
-  // });
+  .delete( function(request, response){
+    Car.findOneAndRemove({name:request.params.name}, function(err){
+      if(err){
+        response.send(err);
+      }
+      response.send("DELETED");
+    });
+  });
 
 module.exports = router;

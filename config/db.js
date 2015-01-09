@@ -30,9 +30,11 @@ process.on('SIGINT', function() {
 }); 
 
 var carSchema = new mongoose.Schema({
-  name : {type: String, required: true},
-  year : {type: Number, default: 1970},
-  maker :{type: String, default: "No Maker Specified"}
+  Name : {type: String, required: true},
+  Year : {type: Number, default: 1970},
+  Maker:{type: String, default: "No Maker Specified"},
+ 
+
 });
 
 
